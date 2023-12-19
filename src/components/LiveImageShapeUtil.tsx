@@ -209,7 +209,7 @@ export class LiveImageShapeUtil extends ShapeUtil<LiveImageShape> {
 					icon={shape.props.overlayResult ? 'chevron-right' : 'chevron-left'}
 					style={{
 						position: 'absolute',
-						top: -85,
+						top: -4,
 						left: shape.props.overlayResult ? shape.props.w : shape.props.w * 2,
 						pointerEvents: 'auto',
 						transform: 'scale(var(--tl-scale))',
@@ -231,7 +231,7 @@ export class LiveImageShapeUtil extends ShapeUtil<LiveImageShape> {
 				icon="file"
 				style={{
 					position: 'absolute',
-					top: 120, // Adjust this value as needed
+					top: 30, // Adjust this value as needed
 					left: shape.props.overlayResult ? shape.props.w : shape.props.w * 2,
 					pointerEvents: 'auto',
 					transform: 'scale(var(--tl-scale))',

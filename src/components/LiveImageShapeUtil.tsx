@@ -161,6 +161,18 @@ export class LiveImageShapeUtil extends ShapeUtil<LiveImageShape> {
 
 		const theme = getDefaultColorTheme({ isDarkMode: useIsDarkMode() })
 
+		const saveImage = () => {
+			if (asset && asset.props.src) {
+				const link = document.createElement('a')
+				link.href = asset.props.src
+				link.download = 'live_image.png'
+				document.body.appendChild(link)
+				link.click()
+				document.body.removeChild(link)
+			}
+		}
+	
+
 		return (
 			<>
 				<SVGContainer>
@@ -214,6 +226,22 @@ export class LiveImageShapeUtil extends ShapeUtil<LiveImageShape> {
 						})
 					}}
 				/>
+							<Button
+				type="icon"
+				icon="file"
+				style={{
+					position: 'absolute',
+					top: 200, // Adjust this value as needed
+					left: shape.props.overlayResult ? shape.props.w : shape.props.w * 2,
+					pointerEvents: 'auto',
+					transform: 'scale(var(--tl-scale))',
+					transformOrigin: '0 4px',
+				}}
+				onPointerDown={(e) => {
+					e.stopPropagation()
+				}}
+				onClick={saveImage}
+			/>
 			</>
 		)
 	}

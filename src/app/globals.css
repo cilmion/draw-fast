@@ -91,3 +91,256 @@ body {
 	font-weight: 200;
 	/* padding: 0px 4px; */
 }
+
+.tlui-help-menu {
+	display: none !important;
+}
+
+.tlui-debug-panel {
+	display: none !important;
+}
+
+.tldraw__editor {
+	position: fixed;
+	inset: 0px;
+	overflow: hidden;
+}
+
+.your-own-api-key {
+	position: absolute;
+	bottom: 72px;
+	right: 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: var(--layer-panels);
+	color: var(--color-text-0);
+	pointer-events: none;
+}
+
+.your-own-api-key__inner {
+	display: flex;
+	font-size: 12px;
+	font-family: Inter, sans-serif;
+	flex-direction: row;
+	max-width: 300px;
+	width: 100%;
+	gap: 4px;
+	background-color: var(--color-low);
+	border-radius: 8px;
+	padding: 6px;
+	pointer-events: all;
+}
+
+.your-own-api-key__mobile {
+	bottom: 108px;
+}
+.your-own-api-key__mobile input {
+	bottom: 108px;
+	font-size: 16px !important;
+	pointer-events: all;
+}
+
+.your-own-api-key input {
+	padding: 6px 12px;
+	border-radius: 4px;
+	color: transparent;
+	background: var(--color-panel);
+	width: 100%;
+	height: 32px;
+}
+
+.input__wrapper {
+	position: relative;
+	flex-grow: 2;
+}
+
+.input__wrapper:not(:focus-within)::after {
+	content: 'Your OpenAI API Key (risky but cool)';
+	display: block;
+	position: absolute;
+	inset: 0px;
+	display: flex;
+	align-items: center;
+	padding: 0px 12px;
+	z-index: 999999999;
+	background-color: none;
+	font-size: 12px;
+	font-family: Inter, sans-serif;
+	opacity: 1;
+}
+
+.input__wrapper::after {
+	pointer-events: none;
+}
+
+.your-own-api-key input:focus {
+	color: var(--color-text-0);
+}
+
+.lockup__link {
+	position: absolute;
+	z-index: var(--layer-panels);
+	bottom: 0px;
+	right: 0px;
+}
+
+.lockup__link__mobile {
+	bottom: 60px;
+}
+
+.question__button {
+	all: unset;
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	background-color: none;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.lockup__link img {
+	height: 40px;
+	padding: 8px;
+}
+
+.tl-theme__light {
+	--color-accent: #e64a4a;
+	--color-background: rgb(249, 250, 251);
+	--color-brush-fill: rgba(144, 144, 144, 0.102);
+	--color-brush-stroke: rgba(144, 144, 144, 0.251);
+	--color-grid: rgb(109, 109, 109);
+	--color-low: hsl(204, 16%, 94%);
+	--color-low-border: hsl(204, 16%, 92%);
+	--color-culled: rgb(235, 238, 240);
+	--color-muted-none: rgba(0, 0, 0, 0);
+	--color-muted-0: rgba(0, 0, 0, 0.02);
+	--color-muted-1: rgba(0, 0, 0, 0.1);
+	--color-muted-2: rgba(0, 0, 0, 0.042);
+	--color-hint: rgba(0, 0, 0, 0.055);
+	--color-overlay: rgba(0, 0, 0, 0.2);
+	--color-divider: #e8e8e8;
+	--color-panel-contrast: #ffffff;
+	--color-panel-overlay: rgba(255, 255, 255, 0.82);
+	--color-panel: #fdfdfd;
+	--color-focus: #004094;
+	--color-selected: #000 !important;
+	--color-selected-contrast: #ffffff;
+	--color-selection-fill: #1e90ff06;
+	--color-selection-stroke: #2f80ed;
+	--color-text-0: #1d1d1d;
+	--color-text-1: #2d2d2d;
+	--color-text-3: #a4a5a7;
+	--color-text-shadow: #ffffff;
+	--color-primary: #000 !important;
+	--color-warn: #d10b0b;
+	--color-text: #000000;
+	--color-laser: #ff0000;
+
+	--shadow-1: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 3px rgba(0, 0, 0, 0.09);
+	--shadow-2: 0px 0px 2px rgba(0, 0, 0, 0.16), 0px 2px 3px rgba(0, 0, 0, 0.24),
+		0px 2px 6px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px var(--color-panel-contrast);
+	--shadow-3: 0px 1px 2px rgba(0, 0, 0, 0.28), 0px 2px 6px rgba(0, 0, 0, 0.14),
+		inset 0px 0px 0px 1px var(--color-panel-contrast);
+	--shadow-4: 0px 0px 3px rgba(0, 0, 0, 0.19), 0px 5px 4px rgba(0, 0, 0, 0.16),
+		0px 2px 16px rgba(0, 0, 0, 0.06), inset 0px 0px 0px 1px var(--color-panel-contrast);
+}
+
+.tlui-toolbar__tools {
+	border-radius: 30px !important;
+	padding: 3px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 16px -1px, rgba(0, 0, 0, 0.05) 0px 0px 16px -8px, rgba(0, 0, 0, 0.12) 0px 0px 16px -12px, rgba(0, 0, 0, 0.08) 0px 0px 2px 0px !important;
+}
+
+.tlui-toolbar__overflow {
+	width: 48px !important;
+}
+
+.tlui-toolbar__tools .tlui-button:hover { 
+	border-radius: 50% !important;
+}
+
+.tlui-toolbar__tools .tlui-button:hover::after {
+	border-radius: 50% !important;
+}
+
+.tlui-button__tool[data-state='selected'] {
+	border-radius: 50% !important;
+}
+
+.tlui-button__tool[data-state='selected']::after {
+	border-radius: 50% !important;
+}
+
+button[data-testid="menu-item.insert-embed"] {
+	display: none;
+  }
+
+
+  div[title="Dark mode"].tlui-button__menu {
+	display: none;
+  }
+
+  div[title="Focus mode"].tlui-button__menu {
+	display: none;
+  }
+
+  div[title="Reduce motion"].tlui-button__menu {
+	display: none;
+  }
+  div[title="Debug mode"].tlui-button__menu {
+	display: none;
+  }
+
+  .conjureBtn {
+    position: absolute;
+    bottom: 62px;
+    right: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--layer-panels);
+  }
+
+  .tlui-menu-zone .tlui-popover {display:none;}
+
+  .tlui-menu-zone {background-color:  transparent !important; top:5px; left:5px;}
+/* Apply box shadow to the container of buttons, excluding the main menu button */
+.tlui-menu-zone .tlui-buttons__horizontal {
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 16px -1px, rgba(0, 0, 0, 0.05) 0px 0px 16px -8px, rgba(0, 0, 0, 0.12) 0px 0px 16px -12px, rgba(0, 0, 0, 0.08) 0px 0px 2px 0px !important; /* Adjust the values to get the desired shadow */
+	padding: 5px; /* Add padding to create space inside the shadowed container */
+	margin-left: 60px; /* Adjust as needed to create space between the main menu button and the container */
+	border-radius: 30px;
+	background: white !important;
+  }
+  
+  /* Ensure the main menu button has a circular background and is separate from the container */
+  .tlui-menu-zone .tlui-button__icon[data-testid="main.menu"] {
+	background-color: #000; /* Replace with your desired color for the main menu */
+	color: var(--color-panel-contrast);
+	border-radius: 50%; /* Makes the background circular */
+	padding: 25px; /* Adjust padding to control the size of the circle */
+	margin-right: 15px; /* Adds some space between this button and the rest */
+	box-shadow: var(--shadow-1) !important; /* Ensure no box shadow is applied to the main menu button */
+	position: absolute; /* Position the main menu button absolutely to remove it from the flow */
+	left: 0px; /* Adjust as needed to position the main menu button */
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  /* Adjust the individual button styles if necessary */
+  .tlui-buttons__horizontal .tlui-button__icon {
+	margin: 0; /* Remove margin between buttons to make them appear as one bar */
+	border-radius: 0; /* Optional: remove border radius from individual buttons */
+  }
+  
+  .tlui-style-panel__wrapper {
+	box-shadow: rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px !important;
+  }

@@ -98,7 +98,6 @@ export default function Home() {
 						overrides={overrides}
 					>
 						<SneakySideEffects />
-						<LockupLink />
 						<LiveImageAssets />
 					</Tldraw>
 				</div>

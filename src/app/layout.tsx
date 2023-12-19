@@ -5,7 +5,7 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const TITLE = 'Djinn by Magi AI'
+const TITLE = 'Pictomancer by Magi AI'
 const DESCRIPTION = 'Draw a picture with AI.'
 const TWITTER_HANDLE = '@magiai_sh'
 const TWITTER_CARD = 'social-twitter.png'

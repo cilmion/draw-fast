@@ -19,8 +19,8 @@ export function MakeLiveButton() {
       className="p-2"
       style={{ cursor: "pointer", zIndex: 100000, pointerEvents: "all" }}
     >
-      <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Draw Fast
+      <div className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+        New Frame
       </div>
     </button>
   );

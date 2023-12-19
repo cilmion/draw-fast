@@ -130,6 +130,9 @@ export function useLiveImage(
 			const shapes = getShapesTouching(shapeId, editor)
 			const frame = editor.getShape<LiveImageShape>(shapeId)!
 
+			// Add this check:
+			if (!frame) return
+
 			const hash = getHashForObject([...shapes])
 			const frameName = frame.props.name
 			if (hash === prevHash && frameName === prevPrompt) return
